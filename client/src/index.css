@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+label {
+  font-size: 1.2rem;
+  color: #656262;
+}
+
+html,
+body {
+  
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(143, 187, 204, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  font-family: 'Nunito', sans-serif;
+}
+
+.form_container {
+  background-color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+
+.form_container > h2 {
+  margin-block: 1rem;
+  padding-block: 0.6rem;
+  color: rgba(0, 212, 255, 1);
+}
+
+.form_container > form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.form_container div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.form_container input {
+  border: none;
+  padding: 0.5rem;
+  border-bottom: 1px solid gray;
+  font-size: 1.1rem;
+  outline: none;
+}
+
+.form_container input::placeholder {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.form_container button {
+  background-color: rgba(0, 212, 255, 1);
+  color: #fff;
+  border: none;
+  padding: 0.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+
+button {
+    background-color: rgba(0, 212, 255, 1);
+    color: #fff;
+    border: none;
+    padding: 0.6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    margin-bottom: 5px;
+}
+
+
+li{
+  margin: 10px;
+}
+
+span a {
+  text-decoration: none;
+  color: rgba(0, 212, 255, 1);
+}
+
+li{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 30%;
+}
+.list{
+  display: flex;
+}
+
+.mleft{
+  margin-left: 50px;
+}
+
+.mt{
+  margin-top: 10px;
+}
+
+.mt1{
+  margin-left: 70%;
+}
+
+.home_page {
+  height: 100vh;
+  width: 100vw;
+  /* background: #000; */
+  color: white;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  padding-left: 10%;
+  text-transform: uppercase;
+  font-size: 1rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.home_page span {
+  color: rgba(0, 212, 255, 1);
+}
+
+.home_page button {
+  background-color: rgb(27, 73, 83);
+  color: #fff;
+  cursor: pointer;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  transition: ease-in 0.3s;
+  border: none;
+}
+
+input {
+  background-color: #cebebe;
+  padding: 5px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+
+/* .btndesign {
+  text-decoration: none;
+  background-color: rgb(27, 73, 83);
+  color: #fff;
+  cursor: pointer;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  border-radius: 2rem;
+  transition: ease-in 0.3s;
+  border: none;
+} */
+
+.custom {
+  border:5px solid #000 ;
+  border-radius: 50px;
+  padding: 2px;
+  font-size: 20px;
+}
+
+.custom::-webkit-file-upload-button{
+  background:#000 ;
+  color: #ffffff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 50px;
+  cursor:pointer ;
+}
+
+
+.home_page button:hover {
+  background-color: rgba(0, 212, 255, 1);
+}
+
+
+@media only screen and (max-width: 1200px){
+  .home_page{
+    font-size: 1.5rem;
+  }
+  .home_page button {
+    padding: 0.6rem 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+.add-comment {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+}
+
+.add-comment h2 {
+  margin-bottom: 10px;
+}
+
+.add-comment textarea {
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.add-comment button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.add-comment button:hover {
+  background-color: #45a049;
+}
+
+
+.pdf-view {
+  padding: 20px;
+  margin-top: 10%;
+  background-color: #f5f5f5;
+  /* display:flex; */
+  overflow: scroll;
+}
+
+/* .pdf-description {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.pdf-iframe {
+  width: 100%;
+  height: calc(100vh - 250px);
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+ */
+ .pdf-description {
+  margin-top: 50%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+}
+
+.pdf-description iframe {
+  width: 500px;
+  margin-top: 40%;
+  height: 500px;
+  margin-bottom: 20px;
+}
+
+.pdf-description h2 {
+  margin-bottom: 10px;
+}
+
+.pdf-description p {
+  margin-bottom: 5px;
+}
