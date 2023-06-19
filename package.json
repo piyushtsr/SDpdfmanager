@@ -1,0 +1,12 @@
+{
+  "name": "sd",
+  "version": "1.0.0",
+  "description": "This MERN web app allow an user to store pdf and share/interact with others",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
