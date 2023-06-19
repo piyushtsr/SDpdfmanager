@@ -90,7 +90,7 @@ const PdfView = () => {
   const [newComment, setNewComment] = useState('');
   const [commentList, setCommentList] = useState([]);
   const [recipientEmail, setRecipientEmail] = useState('');
-
+  axios.defaults.withCredentials = true;
   useEffect(() => {
     fetchComments();
   }, []);
