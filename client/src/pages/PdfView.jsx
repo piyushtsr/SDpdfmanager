@@ -97,7 +97,7 @@ const PdfView = () => {
 
   const fetchComments = async () => {
     try {
-      const response = await axios.get(`http://localhost:4000/${user}/${pdfname}/comments`);
+      const response = await axios.get(`https://pdf-manager-htwa.onrender.com/${user}/${pdfname}/comments`);
       console.log("response", response);
       setCommentList([...commentList, ...response.data]);
     } catch (error) {
@@ -108,7 +108,7 @@ const PdfView = () => {
   const handleAddComment = async () => {
     try {
       // Make a POST request to add the comment
-      await axios.post(`http://localhost:4000/${user}/${pdfname}/comments`, { description: newComment, user: user });
+      await axios.post(`https://pdf-manager-htwa.onrender.com/${user}/${pdfname}/comments`, { description: newComment, user: user });
 
       // Add the new comment to the comment list
       setCommentList([...commentList, { user: `${user}`, description: newComment }]);

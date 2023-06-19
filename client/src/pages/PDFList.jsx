@@ -18,7 +18,7 @@ const PDFList = () => {
     const handleDownload = async (e) => {
       try {
         const filename = e.split('/')[1]
-        const response = await axios.get(`http://localhost:4000/download/${filename}`, {
+        const response = await axios.get(`https://pdf-manager-htwa.onrender.com/download/${filename}`, {
           responseType: 'blob', // Set the response type to 'blob' to handle binary data
         });
   
@@ -38,12 +38,12 @@ const PDFList = () => {
     const fetchPDFs = async () => {
       try {
         const { data } = await axios.post(
-          "http://localhost:4000",
+          "https://pdf-manager-htwa.onrender.com",
           {},
           { withCredentials: true }
         );
         const response = await axios.get(
-          `http://localhost:4000/users/${data.user}/pdfs`
+          `https://pdf-manager-htwa.onrender.com/users/${data.user}/pdfs`
         );
         setPDFFiles(response.data);
       } catch (error) {
