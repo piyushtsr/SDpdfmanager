@@ -21,7 +21,7 @@ app.listen(PORT, () => {
 
 app.use(
   cors({
-    origin: ["https://pdfstore.onrender.com"],
+    origin: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
