@@ -12,12 +12,13 @@ module.exports.Signup = async (req, res, next) => {
     }
     const user = await User.create({ email, password, username, createdAt });
     const token = createSecretToken(user._id);
-    localStorage.setItem("token", token);
-    res.cookie("token", token, {
-      withCredentials: true,
-      httpOnly: true,
-      secure: true
-    });
+    window.localStorage.setItem("token", token);
+
+    // res.cookie("token", token, {
+    //   withCredentials: true,
+    //   httpOnly: true,
+    //   secure: true
+    // });
     res
       .status(201)
       .json({ message: "User signed in successfully", success: true, user });
@@ -49,7 +50,7 @@ module.exports.Login = async (req, res, next) => {
         //  credentials : true,
         //  secure: true
        });
-       localStorage.setItem("token", token);
+       window.localStorage.setItem("token", token);
        res.status(201).json({ message: "User logged in successfully", success: true });
        next()
     } catch (error) {

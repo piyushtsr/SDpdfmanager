@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 
 module.exports.userVerification = (req, res) => {
   // const token = req.cookies.token
-  const token = localStorage.getItem("token");
+  const token = window.localStorage.getItem("token");
   if (!token) {
     return res.json({ status: false })
   }
